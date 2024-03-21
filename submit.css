@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 18%;
+  transform: translate(-60%, -50%); /* Adjust the left offset here */
+  text-align: center;
+  width: 10%;
+}
+
+.success-text {
+  font-size: 5rem; /* Increased font size */
+  color: transparent; /* Make the text transparent */
+  position: relative;
+  display: inline-block;
+  white-space: nowrap; /* Ensures text stays on one line */
+}
+
+.success-text::before {
+  content: "Your form submitted successfully";
+  color: #007bff; /* Set the text color to blue */
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to right, #ffffff, #ffffff); /* White gradient for the border */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  visibility: visible;
+}
+
+.success-text span {
+  visibility: hidden;
+}

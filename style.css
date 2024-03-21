@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+#myVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  /* background-image: url(bgimg.jpg); */
+  /* background: rgb(0, 132, 255); */
+}
+.container {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  opacity: 0.8;
+  background: #000000;
+  padding: 25px;
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.container header {
+  font-size: 1.5rem;
+  /* color: #4600ea; */
+  background: -webkit-linear-gradient(#5250b3, #000000);
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  background: -webkit-linear-gradient(#2e2e32, #000000);
+  color: #ffffff;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #010000;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  background: -webkit-linear-gradient(#232326, #000000);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+  width: 100%;
+  margin-top: 20px;
+  height: 25px;
+  width: 8%;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+  color: rgb(255, 252, 252)
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(4, 24, 176);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #f8f7f7;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #000000;
+  font-size: 1rem;
+}
+
+#nameError {
+  color: red;
+  margin: 0px;
+}
+#phoneError {
+  color: red;
+  margin: 0px;
+}
+#emailError {
+  color: red;
+  margin: 0px;
+}
+#dobError {
+  color: red;
+  margin: 0px;
+}
+#genderError{
+  color: red;
+  margin: 0px;
+}
+#passwordError{
+  color: red;
+  margin: 0px;
+}
+#confirmPasswordError{
+   color: red;
+  margin: 0px;
+}
+#addressError{
+  color: red;
+  margin: 0px;
+  
+}
+#email:hover,#fullname:hover,#dob:hover,#password:hover,#confirmPassword:hover,#phoneNumber:hover,#address:hover, #passsword:hover {
+  border-color: transparent;
+  box-shadow: 0 0 0 5px rgb(0, 38, 255);
+}
+
+#submitButton {
+  height: 55px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: -webkit-linear-gradient(#5250b3, #000000);
+}
+
+#submitButton:disabled {
+  color: rgb(23, 22, 22);
+  cursor: not-allowed;
+  background: #323131; /* Change the background color when disabled */
+}
+
+#submitButton:hover:enabled {
+  background: -webkit-linear-gradient(#1b1995, #000000);
+  color: white;
+}
+
+.form button:hover {
+  background: rgb(1, 60, 255);
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+  
